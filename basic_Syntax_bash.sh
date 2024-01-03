@@ -22,8 +22,16 @@ if [ -d "./$search_name" ]
   else echo "NO,there is not $search_name"
 fi
 
-
+#while文
+#while statement
 while read line
 do
  ls -l $line
 done < input.txt
+
+#for文
+#for statement
+for num in $(echo {1..10})
+ do
+  date
+done
