@@ -1,0 +1,166 @@
+[root@IgpI ~]# ls -l
+total 0
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 1
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 2
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 3
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 4
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 5
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 6
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 7
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 8
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 9
+drwxrwxrwx. 3 root root 15 Jan  6 12:11 garbage
+[root@IgpI ~]#
+[root@IgpI ~]# ls
+1  2  3  4  5  6  7  8  9  garbage
+[root@IgpI ~]#
+[root@IgpI ~]# ls | awk {print $1}
+awk: cmd. line:1: {print
+awk: cmd. line:1:       ^ unexpected newline or end of string
+[root@IgpI ~]#
+[root@IgpI ~]# ls | awk {print$1}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+garbage
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage/'
+1
+2
+3
+4
+5
+6
+7
+8
+9
+garbage
+[root@IgpI ~]#
+[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage'
+1
+2
+3
+4
+5
+6
+7
+8
+9
+[root@IgpI ~]#
+[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage' | xargs -it mv {} garbage
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+[root@IgpI ~]#
+[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage' | xargs -it mv {} garbage/
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+mv: cannot stat '{}': No such file or directory
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage' | xargs -ti mv {} garbage/
+mv 1 garbage/
+mv 2 garbage/
+mv 3 garbage/
+mv 4 garbage/
+mv 5 garbage/
+mv 6 garbage/
+mv 7 garbage/
+mv 8 garbage/
+mv 9 garbage/
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]# ls -l
+total 0
+drwxrwxrwx. 12 root root 96 Jan  6 12:25 garbage
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]# ll garbage/
+total 0
+drwxr-xr-x. 3 root root 17 Jan  6 12:12 -
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 1
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 2
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 3
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 4
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 5
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 6
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 7
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 8
+drwxrwxrwx. 2 root root  6 Jan  6 12:14 9
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]# pwd
+/root
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
+[root@IgpI ~]#
