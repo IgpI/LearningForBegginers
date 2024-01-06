@@ -14,24 +14,7 @@ drwxrwxrwx. 3 root root 15 Jan  6 12:11 garbage
 [root@IgpI ~]# ls
 1  2  3  4  5  6  7  8  9  garbage
 [root@IgpI ~]#
-[root@IgpI ~]# ls | awk {print $1}
-awk: cmd. line:1: {print
-awk: cmd. line:1:       ^ unexpected newline or end of string
-[root@IgpI ~]#
 [root@IgpI ~]# ls | awk {print$1}
-1
-2
-3
-4
-5
-6
-7
-8
-9
-garbage
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage/'
 1
 2
 3
@@ -54,41 +37,6 @@ garbage
 8
 9
 [root@IgpI ~]#
-[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage' | xargs -it mv {} garbage
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-[root@IgpI ~]#
-[root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage' | xargs -it mv {} garbage/
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-mv: cannot stat '{}': No such file or directory
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
 [root@IgpI ~]# ls | awk {print$1} | grep -v 'garbage' | xargs -ti mv {} garbage/
 mv 1 garbage/
 mv 2 garbage/
@@ -99,9 +47,6 @@ mv 6 garbage/
 mv 7 garbage/
 mv 8 garbage/
 mv 9 garbage/
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
 [root@IgpI ~]#
 [root@IgpI ~]# ls -l
 total 0
@@ -121,46 +66,4 @@ drwxrwxrwx. 2 root root  6 Jan  6 12:14 6
 drwxrwxrwx. 2 root root  6 Jan  6 12:14 7
 drwxrwxrwx. 2 root root  6 Jan  6 12:14 8
 drwxrwxrwx. 2 root root  6 Jan  6 12:14 9
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]# pwd
-/root
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
-[root@IgpI ~]#
 [root@IgpI ~]#
